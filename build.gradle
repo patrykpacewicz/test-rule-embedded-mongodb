@@ -19,7 +19,6 @@ apply plugin: 'com.jfrog.bintray'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-scmVersion { tag { prefix = project.name } }
 project.version = scmVersion.version
 project.group = 'pl.patrykpacewicz'
 
