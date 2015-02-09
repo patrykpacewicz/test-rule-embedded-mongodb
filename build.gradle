@@ -5,15 +5,23 @@ buildscript {
 
     dependencies {
         classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.0'
+        classpath 'pl.allegro.tech.build:axion-release-plugin:1.1.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.1'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'optional-base'
+apply plugin: 'pl.allegro.tech.build.axion-release'
+apply plugin: 'com.jfrog.bintray'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+scmVersion { tag { prefix = project.name } }
+project.version = scmVersion.version
+project.group = 'pl.patrykpacewicz'
 
 repositories {
     mavenCentral()
@@ -31,4 +39,14 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'
+}
+
+bintray {
+    user = project.ext.has('bintrayUser') ? project.ext.bintrayUser : ''
+    key = project.ext.has('bintrayApiKey') ? project.ext.bintrayApiKey : ''
+    pkg {
+        repo = "maven"
+        name = project.name
+        publish = true
+    }
 }
