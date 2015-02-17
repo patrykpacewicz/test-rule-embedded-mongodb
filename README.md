@@ -19,7 +19,7 @@ Example for Mavan:
 <dependency>
   <groupId>pl.patrykpacewicz</groupId>
   <artifactId>test-rule-embedded-mongodb</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -31,7 +31,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    testCompile 'pl.patrykpacewicz:test-rule-embedded-mongodb:0.1.0'
+    testCompile 'pl.patrykpacewicz:test-rule-embedded-mongodb:0.1.1'
 }
 ```
 
@@ -41,9 +41,9 @@ How to use
 The following examples in jUnit and Spock shows how to use test-rule-embedded-mongodb.
 If you need a more accurate test cases look insite the `src/test` directory
 
-#### jUnit
+#### Spock framework
 
-```java
+```groovy
 class ExampleSpockSpec extends Specification {
     @Shared @ClassRule
     EmbeddedMongoDbRule embeddedMongoDbRule
@@ -52,9 +52,9 @@ class ExampleSpockSpec extends Specification {
 }
 ```
 
-#### Spock framework
+#### jUnit
 
-```groovy
+```java
 public class ExampleJunitTest {
 
     @ClassRule
