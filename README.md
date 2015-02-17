@@ -1,11 +1,13 @@
 test-rule-embedded-mongodb
 ==========================
 
-[![Build Status](https://travis-ci.org/patrykpacewicz/test-rule-embedded-mongodb.svg)](https://travis-ci.org/patrykpacewicz/test-rule-embedded-mongodb)
+[ ![Build Status](https://travis-ci.org/patrykpacewicz/test-rule-embedded-mongodb.svg)](https://travis-ci.org/patrykpacewicz/test-rule-embedded-mongodb)
 
-test-rule-embedded-mongodb is a jUnit @ClassRule wrapper of 
+[ ![Download](https://api.bintray.com/packages/patrykpacewicz/maven/test-rule-embedded-mongodb/images/download.svg) ](https://bintray.com/patrykpacewicz/maven/test-rule-embedded-mongodb/_latestVersion)
+
+test-rule-embedded-mongodb is a jUnit @ClassRule wrapper of
 [de.flapdoodle.embed.mongo](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo)
-supporting jUnit and Spock. 
+supporting jUnit and Spock.
 
 At the beginning of the tests it fires mongoDb server and when the tests come to an end it stops mongoDb.
 
@@ -58,7 +60,7 @@ public class ExampleJunitTest {
 
     @ClassRule
     public static EmbeddedMongoDbRule embeddedMongoDbRule = new EmbeddedMongoDbRule();
-    
+
     [...]
 }
 ```
