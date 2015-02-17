@@ -2,7 +2,6 @@ test-rule-embedded-mongodb
 ==========================
 
 [ ![Build Status](https://travis-ci.org/patrykpacewicz/test-rule-embedded-mongodb.svg)](https://travis-ci.org/patrykpacewicz/test-rule-embedded-mongodb)
-
 [ ![Download](https://api.bintray.com/packages/patrykpacewicz/maven/test-rule-embedded-mongodb/images/download.svg) ](https://bintray.com/patrykpacewicz/maven/test-rule-embedded-mongodb/_latestVersion)
 
 test-rule-embedded-mongodb is a jUnit @ClassRule wrapper of
